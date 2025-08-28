@@ -1,5 +1,8 @@
 import time
-from . import preprocessing, model_training, evaluation, hyperparams_tuning
+try:
+    from . import preprocessing, model_training, evaluation, hyperparams_tuning
+except ImportError:
+    import preprocessing, model_training, evaluation, hyperparams_tuning
 
 def run() -> None:
     start_time: float = time.time()
